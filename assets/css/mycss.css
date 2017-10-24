@@ -1,24 +1,34 @@
 @keyframes anim {
-    0%{
+    from {
         transform: translateX(0px);
     }
-    50%{
-        transform: translateX(150px);
+
+  30% {
+        transform: translateX(40px) rotate(-10deg);
     }
-    100%{
-        transform: translateX(150px) rotate(30deg);
+
+  50% {
+        transform: translateX(-10px) rotate(10deg);
+    }
+
+  80% {
+        transform: translate(10px, 10px) rotate(-10deg);
+    }
+
+  to {
+        transform: translate(-10px, -10px) rotate(10deg);
+        border-radius: 30px;
     }
 }
+
 .drone
 {
+    margin: 100px;
     width: 200px;
     height: 150px;
-    background-color: blue;
-
 }
-
 
 .drone:hover
 {
-    animation: anim 5s;
+    animation: anim 10s linear alternate infinite; /* Boucle d'animation ! */
 }
